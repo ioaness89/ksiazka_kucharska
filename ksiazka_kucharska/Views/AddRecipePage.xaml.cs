@@ -31,7 +31,20 @@ public partial class AddRecipePage : ContentPage
 
     private async void OnSaveClicked(object sender, EventArgs e)
     {
-		if (_editingRecipe != null)
+
+        if (string.IsNullOrWhiteSpace(TitleEntry.Text))
+        {
+            await DisplayAlertAsync("Błąd", "Nazwa przepisu jest wymagana", "OK");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(TimeEntry.Text) || !int.TryParse(TimeEntry.Text, out _))
+        {
+            await DisplayAlertAsync("Błąd", "Podaj poprawny czas przygotowania", "OK");
+            return;
+        }
+
+        if (_editingRecipe != null)
 		{
 			_editingRecipe.Title = TitleEntry.Text;
 			_editingRecipe.Category = SelectedOption;
