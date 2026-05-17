@@ -6,19 +6,16 @@ Aplikacja mobilna stworzona w **.NET MAUI** umożliwiająca przeglądanie, dodaw
 
 ## Funkcjonalności
 
-### Obowiązkowe
 - **Lista przepisów** – ekran główny z nazwą, kategorią i czasem przygotowania każdego dania
 - **Usuwanie przepisu** – swipe w lewo na przepisie i potwierdzenie operacji
 - **Dodawanie przepisu** – formularz z walidacją na osobnym ekranie
 - **Szczegóły przepisu** – pełna lista składników, opis przygotowania i czas
 - **Edycja przepisu** – przycisk Edytuj w widoku szczegółów
 - **Ulubione** – oznaczanie przepisów jako ulubione i osobna zakładka
-
-### Dodatkowe
 - **Wyszukiwanie** po nazwie przepisu (filtrowanie na żywo)
 - **Filtrowanie** po kategorii (Śniadanie / Obiad / Kolacja / Deser)
 - **Sortowanie** po czasie przygotowania (rosnąco / malejąco)
-- **Tryb ciemny** – przełącznik w aplikacji, automatycznie podąża za systemem
+- **Tryb ciemny** – przełącznik w aplikacji
 
 ---
 
