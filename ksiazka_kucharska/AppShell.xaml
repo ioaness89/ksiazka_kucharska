@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ksiazka_kucharska.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ksiazka_kucharska"
+    xmlns:views="clr-namespace:ksiazka_kucharska.Views"
+    Title="ksiazka_kucharska">
+
+    <ShellContent
+        Title="Główna"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent Title="Ulubione"
+        ContentTemplate="{DataTemplate views:FavoritesPage}"
+        Route="FavoritesPage" />
+
+</Shell>

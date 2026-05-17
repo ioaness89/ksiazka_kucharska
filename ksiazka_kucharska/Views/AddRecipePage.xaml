@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ksiazka_kucharska.Views.AddRecipePage"
+             Title="Dodaj lub edytuj przepis">
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Entry x:Name="TitleEntry" Placeholder="Nazwa przepisu"></Entry>
+
+        <Label Text="Wybierz opcję: "></Label>
+        <Picker Title="Wybierz"
+                ItemsSource="{Binding Options}"
+                SelectedItem="{Binding SelectedOption}">
+        </Picker>
+        <Entry x:Name="TimeEntry" Placeholder="Długość przygotowania (min)"></Entry>
+        <Editor x:Name="DescriptionEditor" Placeholder="Opis przygotowania" AutoSize="TextChanges" HeightRequest="120"></Editor>
+        <Editor x:Name="IngredientsEditor" Placeholder="Składniki (każdy w nowej linii)" HeightRequest="120" />
+        <Button Text="Zapisz" Clicked="OnSaveClicked"></Button>
+    </VerticalStackLayout>
+</ContentPage>

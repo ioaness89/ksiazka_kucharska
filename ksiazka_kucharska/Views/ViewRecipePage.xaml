@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ksiazka_kucharska.Views.ViewRecipePage"
+             Title="Szczegóły">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label FontSize="28" FontAttributes="Bold" Text="{Binding Title}"></Label>
+            <Label FontSize="18" Text="{Binding Category}"></Label>
+            <Label FontSize="16" Text="{Binding PreparationtimeMinutes, StringFormat='Czas: {0} min'}"></Label>
+            <Label FontSize="20" Text="Opis"></Label>
+            <Label Text="{Binding Description}"></Label>
+            <Label FontSize="20"
+                   Text="Składniki" />
+
+            <CollectionView ItemsSource="{Binding Ingredients}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding ., StringFormat='• {0}'}" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button Text="Edytuj" Clicked="OnEditClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
